@@ -1,23 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import TextInput from '../../components/Common/TextInput';
+import Category from '../../components/Category';
 
 const setup = () => {
   const props = {
-    placeholder: '',
-    icon: '',
-    name: '',
-    value: '',
-    onChange: jest.fn(),
+    category: {
+      cheats: [{}],
+    },
   };
 
-  const wrapper = shallow(<TextInput {...props} />);
+  const wrapper = shallow(<Category {...props} />);
 
   return { wrapper, props };
 };
 
-describe('<TextInput />', () => {
+describe('<Category />', () => {
   const { wrapper } = setup();
 
   it('should render correctly', () => {

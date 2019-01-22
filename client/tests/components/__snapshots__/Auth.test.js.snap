@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Auth /> should render correctly 1`] = `
+<div>
+  <ul>
+    <li
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+        data-for="register"
+        data-tip={true}
+      >
+        person_add
+      </i>
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+        data-for="login"
+        data-tip={true}
+      >
+        account_circle
+      </i>
+    </li>
+  </ul>
+  <form
+    onSubmit={[Function]}
+  >
+    <TextInput
+      icon="account_circle"
+      name="username"
+      onChange={[Function]}
+      placeholder="Username"
+      type="text"
+      value=""
+    />
+    <TextInput
+      icon="lock"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <button
+      className="register-btn"
+      type="submit"
+      value="register"
+    >
+      Register
+    </button>
+  </form>
+</div>
+`;

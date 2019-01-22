@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Category /> should render correctly 1`] = `
+<div
+  className="category col s4"
+>
+  <span
+    className="category-title"
+  />
+  <div
+    className="category-cheat"
+  >
+    <Cheat
+      cheat={Object {}}
+    />
+  </div>
+</div>
+`;

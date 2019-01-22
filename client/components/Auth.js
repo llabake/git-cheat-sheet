@@ -21,6 +21,7 @@ export class Auth extends Component {
   };
 
   handleChange = (event) => {
+    event.preventDefault();
     const field = event.target.name;
     const { user, errors } = this.state;
     user[field] = event.target.value;
