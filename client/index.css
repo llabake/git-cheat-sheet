@@ -1,0 +1,106 @@
+.category-title {
+  display: block;
+  padding: .3rem;
+  color: white;
+  background-color: #52555B;
+  border: 1px solid black;
+  text-transform: capitalize;
+}
+
+.header {
+  color: #61646B;
+  border-top: 2px solid #D7D8DB;
+  border-bottom: 2px solid #D7D8DB;
+}
+
+pre {
+  white-space: pre-wrap;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: #F4F5F5;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+pre > span {
+  cursor: pointer;
+}
+
+.first {
+  color: #896724;
+}
+.category {
+  margin-bottom: 1rem;
+}
+
+.category-cheat {
+  padding: .5rem;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.cheat-copied {
+  font-size: 0.625rem;
+  float: right;
+}
+
+/*.cheat-command {*/
+  /*display: block;*/
+  /*font-family: monospace;*/
+  /*font-size: 12px*/
+/*}*/
+
+.sidenav-trigger {
+  margin-top: 5rem;
+}
+
+.sidenav-trigger > i {
+  color: #52555B;
+}
+
+.logo {
+  width: 5rem;
+  display: block;
+  margin: 2rem auto;
+}
+
+.search-placeholder {
+  text-transform: uppercase;
+}
+
+form {
+  margin: 1rem;
+}
+
+.form-field {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 2.8125rem 0;
+}
+
+.register-btn {
+  text-align: center;
+  background: #896724;
+  margin-left: 42px;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.625rem 2.5rem;
+  cursor: pointer;
+}
+
+.user-icon {
+  color:  #896724;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+ul > li {
+  display: inline;
+  margin-right: 3rem;
+  cursor: pointer;
+  color: #896724;
+}

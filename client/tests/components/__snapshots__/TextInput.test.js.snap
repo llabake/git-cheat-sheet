@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> should render correctly 1`] = `
+<TextInput
+  icon=""
+  name=""
+  onChange={[MockFunction]}
+  placeholder=""
+  value=""
+>
+  <div
+    className="form-field"
+  >
+    <i
+      className="material-icons icon user-icon"
+    />
+    <input
+      className="form-control"
+      name=""
+      onChange={[MockFunction]}
+      placeholder=""
+      value=""
+    />
+    <div
+      className="error"
+    />
+  </div>
+</TextInput>
+`;
