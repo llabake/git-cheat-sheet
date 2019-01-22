@@ -8,11 +8,12 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 if (config.use_env_variable) {
   mongoose.connect(process.env[config.use_env_variable],
-    { useNewUrlParser: true });
+    { useNewUrlParser: true }, () => {
+      seed();
+    });
 } else {
   const { prefix, host, port, database } = config;
   const mongoUri = `${prefix}://${host}:${port}/${database}`;
-  console.log(mongoUri, 'jujuj')
   mongoose.connect(mongoUri, { useNewUrlParser: true }, () => {
     dropDatabase();
     process.env.NODE_ENV === 'development' ? seed() : ''
