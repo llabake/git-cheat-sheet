@@ -18,5 +18,5 @@ export const errorResponse = (res, statusCode, success, message) => (
 );
 
 export const hostUrl = process.env.NODE_ENV === 'production'
-  ? 'https://gitcheatsheetapp.herokuapp.com'
+  ? 'https://git-cheat-hint-sheet.herokuapp.com'
   : 'http://localhost:7777';
