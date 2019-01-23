@@ -1,16 +1,5 @@
 import Category from "../model/category";
 import { errorResponse, successResponse } from "../helpers/utils";
-import Cheat from "../model/cheat";
-
-// export const createCategory = async (req, res) => {
-//   try {
-//     const category = new Category (req.body);
-//     await category.save();
-//     return successResponse(res, 201, `Category successfully created`, category)
-//   } catch (error) {
-//     return errorResponse(res, 500, false, error.message);
-//   }
-// };
 
 export const getByCategory = async (req, res) => {
   try {

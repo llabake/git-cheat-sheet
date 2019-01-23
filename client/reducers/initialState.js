@@ -1,5 +1,5 @@
 export default {
-  user: "",
+  user: localStorage.getItem('token'),
   cheats: [],
   categories: [],
   searchResults: null,

@@ -1,55 +1,4 @@
 export default {
-  'install git': [
-    {
-      header: 'Install Homebrew',
-      description: 'Install git on macOS with Homebrew',
-      commands: ['brew install git'],
-      keywords: ['install', 'macos', 'homebrew'],
-    },
-    {
-      header: 'Install Linux',
-      description: 'Install git on Debian-based linux',
-      commands: ['sudo apt-get install git'],
-      keywords: ['install', 'apt-get', 'debian', 'linux'],
-    },
-    {
-      header: 'Install Windows',
-      description: 'Install git on Windows with Chocolatey',
-      commands: ['choco install git'],
-      keywords: ['install', 'windows', 'choco'],
-    }],
-  configuration: [
-    {
-      header: 'Configure user name',
-      commands: ['git config --global user.name [name]'],
-      description: 'Sets the name you want attached to your commit transaction',
-      keywords: ['configuration', 'name', 'email', 'user'],
-    },
-    {
-      header: 'Configure user email',
-      commands: ['git config --global user.email [email address]'],
-      description: 'Sets the email you want atached to your commit transactions',
-      keywords: ['configuration', 'name', 'email', 'user'],
-    },
-    {
-      header: 'Configure terminal color',
-      commands: ['git config --global color.ui auto'],
-      description: 'Enables helpful colorization of commands line output',
-      keywords: ['configuration', 'color', 'ui', 'customization'],
-    }],
-  'create repo': [
-    {
-      header: 'Create local repo',
-      commands: ['git init [project-name]'],
-      description: 'Creates a new local repository with the specified name',
-      keywords: ['new', 'project', 'create'],
-    },
-    {
-      header: 'Clone a repo',
-      commands: ['git clone [url]'],
-      description: 'Downloads a project and its entire version history',
-      keywords: ['download', 'remote', 'clone', 'checkout'],
-    }],
   'make changes': [
     {
       header: 'Track file changes',
@@ -207,6 +156,113 @@ export default {
       description: 'Removes the remote repository',
       keywords: [],
     }],
+  'history & diff': [
+    {
+      header: 'View history log',
+      commands: [
+        'git log',
+        'git log --oneline',
+        'git log --decorate',
+        'git log --graph',
+        'git log --date=relative',
+        'git shortlog',
+        'git shortlog HEAD~20',
+      ],
+      description: 'Lists version history for the current branch',
+      keywords: [],
+    },
+    {
+      header: 'View file history log',
+      commands: ['git log --follow [file]'],
+      description: 'Lists version history for a file, including renames',
+      keywords: [],
+    },
+    {
+      header: 'Show branch diff',
+      commands: [
+        'git diff [first-branch]...[second-branch]',
+        'git diff [first-branch]...[second-branch] --stat',
+        'git diff [first-branch]...[second-branch] --summary',
+      ],
+      description: 'Shows content differences between two branches',
+      keywords: [],
+    },
+    {
+      header: 'View commit changes',
+      commands: ['git show [commit]'],
+      description: 'Shows changes of the specified commit',
+      keywords: [],
+    }],
+  configuration: [
+    {
+      header: 'Configure user name',
+      commands: ['git config --global user.name [name]'],
+      description: 'Sets the name you want attached to your commit transaction',
+      keywords: ['configuration', 'name', 'email', 'user'],
+    },
+    {
+      header: 'Configure user email',
+      commands: ['git config --global user.email [email address]'],
+      description: 'Sets the email you want atached to your commit transactions',
+      keywords: ['configuration', 'name', 'email', 'user'],
+    },
+    {
+      header: 'Configure terminal color',
+      commands: ['git config --global color.ui auto'],
+      description: 'Enables helpful colorization of commands line output',
+      keywords: ['configuration', 'color', 'ui', 'customization'],
+    }],
+  'create repo': [
+    {
+      header: 'Create local repo',
+      commands: ['git init [project-name]'],
+      description: 'Creates a new local repository with the specified name',
+      keywords: ['new', 'project', 'create'],
+    },
+    {
+      header: 'Clone a repo',
+      commands: ['git clone [url]'],
+      description: 'Downloads a project and its entire version history',
+      keywords: ['download', 'remote', 'clone', 'checkout'],
+    }],
+  'install git': [
+    {
+      header: 'Install Homebrew',
+      description: 'Install git on macOS with Homebrew',
+      commands: ['brew install git'],
+      keywords: ['install', 'macos', 'homebrew'],
+    },
+    {
+      header: 'Install Linux',
+      description: 'Install git on Debian-based linux',
+      commands: ['sudo apt-get install git'],
+      keywords: ['install', 'apt-get', 'debian', 'linux'],
+    },
+    {
+      header: 'Install Windows',
+      description: 'Install git on Windows with Chocolatey',
+      commands: ['choco install git'],
+      keywords: ['install', 'windows', 'choco'],
+    }],
+  'moving & removing files': [
+    {
+    header: 'Removing file',
+    commands: ['git rm [file]'],
+    description: 'Deletes the file from the working directory and stages the deletion',
+    keywords: [],
+  },
+  {
+    header: 'Disable version control for file',
+    commands: ['git rm --cached [file]'],
+    description: 'Removes the file from version control but preserves the file locally',
+    keywords: [],
+  },
+  {
+    header: 'Renaming file',
+    commands: ['git mv [from] [to]'],
+    description: 'Renames the file',
+    keywords: [],
+  }],
   tagging: [
     {
       header: 'List tags',
@@ -255,61 +311,5 @@ export default {
       commands: ['git commit --amend'],
       description: 'Change the commit message',
       keywords: ['undo', 'message', 'commit'],
-    }],
-  'moving & removing files': [
-    {
-      header: 'Removing file',
-      commands: ['git rm [file]'],
-      description: 'Deletes the file from the working directory and stages the deletion',
-      keywords: [],
-    },
-    {
-      header: 'Disable version control for file',
-      commands: ['git rm --cached [file]'],
-      description: 'Removes the file from version control but preserves the file locally',
-      keywords: [],
-    },
-    {
-      header: 'Renaming file',
-      commands: ['git mv [from] [to]'],
-      description: 'Renames the file',
-      keywords: [],
-    }],
-  'history & diff': [
-    {
-      header: 'View history log',
-      commands: [
-        'git log',
-        'git log --oneline',
-        'git log --decorate',
-        'git log --graph',
-        'git log --date=relative',
-        'git shortlog',
-        'git shortlog HEAD~20',
-      ],
-      description: 'Lists version history for the current branch',
-      keywords: [],
-    },
-    {
-      header: 'View file history log',
-      commands: ['git log --follow [file]'],
-      description: 'Lists version history for a file, including renames',
-      keywords: [],
-    },
-    {
-      header: 'Show branch diff',
-      commands: [
-        'git diff [first-branch]...[second-branch]',
-        'git diff [first-branch]...[second-branch] --stat',
-        'git diff [first-branch]...[second-branch] --summary',
-      ],
-      description: 'Shows content differences between two branches',
-      keywords: [],
-    },
-    {
-      header: 'View commit changes',
-      commands: ['git show [commit]'],
-      description: 'Shows changes of the specified commit',
-      keywords: [],
     }],
 };

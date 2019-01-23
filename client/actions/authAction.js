@@ -1,6 +1,6 @@
 import axios from 'axios';
 import toastr from "toastr";
-import { AUTH } from "./actionTypes";
+import { AUTH, LOGOUT } from "./actionTypes";
 
 import { hostUrl } from "../helpers/utils";
 
@@ -11,17 +11,19 @@ const authenticateUser = token => ({
   token,
 });
 
-export const authUser = (type, userData) => {
-  return async (dispatch) => {
-    try {
-      const response = await axios.post(`${hostUrl}${baseUrl}/${type}`, userData);
-      const { data: { data: { token }, message } } = response;
-      localStorage.setItem('token', token);
-      dispatch(authenticateUser(token));
-      toastr.success(message);
-    }
-    catch (e) {
-      throw (e);
-    }
-  };
+export const authUser = (type, userData) => async (dispatch) => {
+  try {
+    const response = await axios.post(`${hostUrl}${baseUrl}/${type}`, userData);
+    const { data: { data: { token }, message } } = response;
+    localStorage.setItem('token', token);
+    dispatch(authenticateUser(token));
+    toastr.success(message);
+  } catch (e) {
+    throw (e);
+  }
+};
+
+export const signOut = () => (dispatch) => {
+  localStorage.removeItem('token');
+  dispatch({ type: LOGOUT });
 };

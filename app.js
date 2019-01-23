@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist/')));
 app.use(cors());
 app.get('/api/v1', (req, res) => {
-  res.json({ message: 'Welcome to the coolest API on earth!' });
+  res.status(200).json({ message: 'Welcome to the coolest API on earth!' });
 });
 app.use(router);
 
