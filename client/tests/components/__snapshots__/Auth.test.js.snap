@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Auth /> should render correctly 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "margin": "2rem",
+      }
+    }
+  >
+    <strong>
+      Enjoy the Cheat Sheet
+    </strong>
+    <i
+      className="material-icons"
+      data-for="logout"
+      data-tip={true}
+      onClick={[Function]}
+    >
+      lock
+    </i>
+  </div>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="signup"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Signup
+    </span>
+  </ReactTooltip>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="login"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Login
+    </span>
+  </ReactTooltip>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="logout"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Logout
+    </span>
+  </ReactTooltip>
+</div>
+`;

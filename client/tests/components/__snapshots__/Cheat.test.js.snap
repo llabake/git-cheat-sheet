@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cheat component renders without crashing 1`] = `
+<div
+  className="header"
+>
+  <span>
+    description
+  </span>
+  <span
+    className="cheat-copied"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    Copied!
+  </span>
+  <pre>
+    $ 
+    <code>
+      <CopyToClipboard
+        onCopy={[Function]}
+        text="git lorem ipsum"
+      >
+        <span>
+          <span
+            className="first"
+          >
+            git
+          </span>
+          <span>
+             
+            lorem ipsum
+          </span>
+        </span>
+      </CopyToClipboard>
+    </code>
+  </pre>
+</div>
+`;
