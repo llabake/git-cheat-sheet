@@ -2,56 +2,60 @@
 
 exports[`<Auth /> should render correctly 1`] = `
 <div>
-  <ul>
-    <li
-      onClick={[Function]}
-    >
-      <i
-        className="material-icons"
-        data-for="register"
-        data-tip={true}
-      >
-        person_add
-      </i>
-    </li>
-    <li
-      onClick={[Function]}
-    >
-      <i
-        className="material-icons"
-        data-for="login"
-        data-tip={true}
-      >
-        account_circle
-      </i>
-    </li>
-  </ul>
-  <form
-    onSubmit={[Function]}
+  <div
+    style={
+      Object {
+        "margin": "2rem",
+      }
+    }
   >
-    <TextInput
-      icon="account_circle"
-      name="username"
-      onChange={[Function]}
-      placeholder="Username"
-      type="text"
-      value=""
-    />
-    <TextInput
-      icon="lock"
-      name="password"
-      onChange={[Function]}
-      placeholder="Password"
-      type="password"
-      value=""
-    />
-    <button
-      className="register-btn"
-      type="submit"
-      value="register"
+    <strong>
+      Enjoy the Cheat Sheet
+    </strong>
+    <i
+      className="material-icons"
+      data-for="logout"
+      data-tip={true}
+      onClick={[Function]}
     >
-      Register
-    </button>
-  </form>
+      lock
+    </i>
+  </div>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="signup"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Signup
+    </span>
+  </ReactTooltip>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="login"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Login
+    </span>
+  </ReactTooltip>
+  <ReactTooltip
+    className="tooltip"
+    effect="solid"
+    id="logout"
+    insecure={true}
+    resizeHide={true}
+    wrapper="div"
+  >
+    <span>
+      Logout
+    </span>
+  </ReactTooltip>
 </div>
 `;

@@ -16,6 +16,7 @@ const setup = () => {
     handleChange: jest.fn(() => new Promise(resolve => resolve())),
     validate: jest.fn(() => new Promise(resolve => resolve())),
     saveUser: jest.fn(() => new Promise(resolve => resolve())),
+    signOut: jest.fn(() => new Promise(resolve => resolve())),
     toggleShowSignin: jest.fn(() => new Promise(resolve => resolve())),
     toggleShowSignup: jest.fn(() => new Promise(resolve => resolve())),
   };
@@ -95,13 +96,25 @@ describe('<Auth />', () => {
     });
     wrapper.instance().toggleShowSignup();
     expect(spy).toHaveBeenCalled();
+  });
+  
+  it('sign out a user', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'signOut');
+    const event = {
+      preventDefault: jest.fn(),
+		};
+    wrapper.instance().signOut(event);
+    expect(spy).toHaveBeenCalled();
 	});
 	
 	it('should dispatch needed actions', () => {
     const dispatch = jest.fn();
     expect(mapDispatchToProps(dispatch)).toHaveProperty('authUser');
-    const { authUser } = mapDispatchToProps(dispatch);
+    expect(mapDispatchToProps(dispatch)).toHaveProperty('signOut');
+    const { authUser, signOut } = mapDispatchToProps(dispatch);
     authUser('login', { username: 'james', password: 'pasdss'} );
+    expect(dispatch).toHaveBeenCalled();
+    signOut()
     expect(dispatch).toHaveBeenCalled();
   });
 });
